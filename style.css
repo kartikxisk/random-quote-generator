@@ -1,0 +1,168 @@
+:root {
+  --text-color: #111827;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  background-color: beige;
+  position: relative;
+}
+.containter {
+  background-color: beige;
+  max-width: 90rem;
+  margin: 0px auto;
+}
+
+header {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: #111827;
+  color: #eee;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background: var(--text-color);
+  text-align: center;
+  transition: 0.2s ease-in all;
+}
+
+header a:hover {
+  color: beige;
+  box-shadow: 0px 0px 10px 1px rgb(85, 85, 85);
+}
+.quote {
+  max-width: 40rem;
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px 1px #eee;
+}
+.quote-content {
+  margin-top: 1rem;
+  text-align: center;
+}
+.quote-content p {
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  word-spacing: 0.1rem;
+}
+
+.quote-content small {
+  padding: 0.2rem 1rem;
+  color: #5c626e;
+}
+.quote-tag {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0px;
+  top: -2rem;
+  justify-content: center;
+}
+.quote-tag small {
+  padding: 0.5rem 1rem;
+  background-color: aquamarine;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.next-quote-btn-div{
+    position: absolute;
+    bottom: 3rem;
+}
+
+.random-quote {
+  border: 0;
+  background-color: blueviolet;
+  padding: 0.5rem 1rem;
+  color: rgb(238, 238, 238);
+  cursor: pointer;
+  transition: 0.2s transform;
+}
+
+.random-quote:active{
+    transform: scale(1.2);
+}
+
+.jiggle-animation{ 
+    animation: 1s jiggle ease-in-out 1;
+}
+
+@keyframes jiggle {
+    10%{
+        transform: translateX(-1rem);
+    }
+    20%{
+        transform: translateX(1rem);
+    }
+    30%{
+        transform: translateX(-1rem);
+        filter: blur(2px);
+    }
+    40%{
+        transform: translateX(1rem);
+        filter: blur(1px);
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px){
+    .quote {
+        padding: 2rem 1rem;
+    }
+
+    header a:active {
+        color: beige;
+        box-shadow: 0px 0px 10px 1px rgb(85, 85, 85);
+    }
+    header h1{
+        width: 70%;
+    }
+    header a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        background: var(--text-color);
+        text-align: center;
+        transition: 0.2s ease-in all;
+        font-size: 0.8rem;
+      }
+}
